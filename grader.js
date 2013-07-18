@@ -24,8 +24,14 @@ References:
 var fs = require('fs');
 var program = require('commander');
 var cheerio = require('cheerio');
+var util = require('util');
+var rest = require('restler');
 var HTMLFILE_DEFAULT = "index.html";
 var CHECKSFILE_DEFAULT = "checks.json";
+var URL_DEFAULT = "http://fathomless-island-9854.herokuapp.com/";
+var checksfile;
+var checkJson;
+var out;
 
 var assertFileExists = function(infile) {
 	var instr = infile.toString();
@@ -44,6 +50,36 @@ var loadChecks = function(checksfile) {
 	return JSON.parse(fs.readFileSync(checksfile));
 };
 
+var restlerHtmlFile = function(url) {
+	rest.get(url).on('complete', function(result) {
+		checkURL(result);
+	});
+};
+
+var checkURL = function(result) {
+	if(result instanceof Error) {
+		console.error('Error: ' + util.format(response.message));
+	} else {
+		//console.log('Result: ' + result);
+		$ = cheerio.load(result);
+		var checks = loadChecks(checksfile).sort();
+		//console.log($);
+		//console.log(checks);
+	
+		out = {};
+		for(var ii in checks) {
+			var present = $(checks[ii]).length > 0;
+			out[checks[ii]] = present;
+		}
+		//console.log(out);
+		outRes(out);
+
+	}
+	
+	
+}
+
+
 var checkHtmlFile = function(htmlfile, checksfile) {
 	$ = cheerioHtmlFile(htmlfile);
 	var checks = loadChecks(checksfile).sort();
@@ -61,14 +97,23 @@ var clone = function(fn) {
 	return fn.bind({});
 };
 
+var outRes = function(checkJson) {
+	var outJson = JSON.stringify(checkJson, null, 4);
+	console.log(outJson);
+}
+
 if(require.main == module) {
 	program
 		.option('-c, --checks <check_file>', 'Path to checks.json', clone(assertFileExists), CHECKSFILE_DEFAULT)
 		.option('-f, --file <html_file>', 'Path to index.html', clone(assertFileExists), HTMLFILE_DEFAULT)
+		.option('-u, --url <url>', 'URL to index.html')
 		.parse(process.argv);
-	var checkJson = checkHtmlFile(program.file, program.checks);
-	var outJson = JSON.stringify(checkJson, null, 4);
-	console.log(outJson);
+	checksfile = program.checks;
+	if(program.url) {
+		restlerHtmlFile(program.url);
+	} else {
+		outRes(checkHtmlFile(program.file, checksfile));
+	}	
 } else {
 	exports.checkHtmlFile = checkHtmlFile;
 }
