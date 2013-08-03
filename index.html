@@ -1,269 +1,291 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Electronic Music Stand</title>
+    <title>Music Stand of the Future</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap-combined.no-icons.min.css">
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css">
-    <link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fsocial-buttons.css">
+    <link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fsocial-buttons.css">    
     <script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fjquery.js"></script>
     <script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap.js"></script>
     <link href="http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,300,400,600,700,800" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,300,400,600,700,800" 
+          rel="stylesheet" type="text/css">
     <style type="text/css">
 
-    /* large desktop */
-    @media (min-width: 980px) {
+      /* Large desktop */
+      @media (min-width: 980px) { 
         body {
-            padding-top: 60px;
+         padding-top: 60px;
         }
-        .linediv-l {
-            border-right: 1px white solid;
-        }   
-        .linediv-r {
-            border-left: 1px white solid;
-        }   
-    }
-
-    /* landscape phones and down */
-    @media (max-width: 480px) {
-        .copy {
-            padding: 2.5% 10%;
+       .linediv-l {
+         border-right: 1px white solid;
         }
-        .linediv-l {
-            border-bottom: 1px white solid;
-        }
-        .linediv-r {
-            border-top: 1px white solid;
-        }
-    }
+       .linediv-r {
+         border-left: 1px white solid;
+       }
+      }
 
+      /* Landscape phones and down */
+      @media (max-width: 480px) { 
+       .copy {
+         padding: 2.5% 10%;
+       }
+       .linediv-l {
+         border-bottom: 1px white solid;
+       }
+       .linediv-r {
+         border-top: 1px white solid;
+       }
+      }
 
-    /* all form factors */
+      /* All form factors */
 
-    /* main body and headings */
-    body{
-        font-family: 'open sans', helvetica, arial, sans-serif;
-    }   
-    .headisng, .subheading {
-        font-family: 'ubuntu', helvetica, arial, sans-serif;
+      /* Main body and headings */
+      body{
+        font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+      }
+      .heading, .subheading {
+        font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
         text-align: center;
-    }
-    p.lead {
+      }
+      p.lead {
         padding-top: 1.5%;
         font-size: 24px;
         line-height: 30px;
-    }
-    p {
+      }
+      p {
         font-size: 18px;
         line-height: 24px;
-    }
+      }
 
-    /* video pitch and action */
-    .pitch {
+      /* Video pitch and Action */
+      .pitch {
         padding: 2.5% 0%;
-    }
-    .order {
+      }
+      .order {
         padding: 2% 0%;
-    }
-    .actions {
+      }
+      .actions {
         background-color: #343434;
         padding: 3% 0%;
-    }
-    .video, .thermometer, .order, .social, .statistics {
+      }
+      .video, .thermometer, .order, .social, .statistics {
         text-align: center;
-    }
-    .statistics h3, .statistics p {
+      }
+      .statistics h3, .statistics p {
         color: white;
-    }
+      }
 
-    /* marketing copy and footer */
-    .copy {
+      /* Marketing Copy and Footer */
+      .copy {
         padding-top: 2.5%;
         padding-bottom: 2.5%;
         text-align: justify;
-    }
-    .asset {
+      }
+      .asset {
         padding: 2.5% 0%;
-    }
-    .footer {
+      }
+      .footer {
         color: #cccccc;
         text-align: center;
-    }
-    .footer p {
+      }
+      .footer p {
         font-size: 11px;
-    }
-    .footer a {
+      }
+      .footer a {
         color: #ccccff;
-    }
+      }
     </style>
   </head>
-  
   <body>
-  <!-- mobile-friendly navbar adpated from example -->
-  <!-- http://twitter.github.io/bootstrap/examples/starter-template.html -->
-  <div class="navbar navbar-inverse navbar-fixed-top">
+
+    <!-- Mobile-friendly navbar adapted from example. -->
+    <!-- http://twitter.github.io/bootstrap/examples/starter-template.html -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
-          <div class="container">
-              <button type="button" class="btn btn-navbar"
+        <div class="container">
+          <button type="button" class="btn btn-navbar"
                   data-toggle="collapse" data-target=".nav-collapse">
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-              </button>
-              <a class="brand" href="#">Bitstarter</a>
-              <div class="nav-collapse collapse">
-                  <ul class="nav">
-                      <li class="active"><a href="#">Home</a></li>
-                      <li><a href="#about">About</a></li>
-                      <li><a href="#contact">Contact</a></li>
-                  </ul>
-              </div><!--/.nav-collapse -->
-          </div>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="#">Electronic Music Stand</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
       </div>
-  </div>
-
-
-  <!-- we use row-fluid inside containers to achieve a resizable layout -->
-  <!-- blogs.endjin.com/2013/04/tips-for-implementing-responsive-designs-using-bootstrap/ -->
-  <!-- http://stackoverflow.com/a/12270322 -->
-  <div class="container">
-    <!-- font and paired font of .heading/.subheading and body from google fonts -->
-    <!-- www.google.com/fonts/specimen/ubuntu -->
-    <!-- www.google.com/fonts/specimen/ubuntu#pairings -->
-    <div class="row-fluid heading">
-        <div class="span12">
-            <h1>Electronic Music Stand</h1>
-        </div>
     </div>
-    <div class="row-fluid subheading">
+
+    <!-- We use row-fluid inside containers to achieve a resizable layout. -->
+    <!-- blogs.endjin.com/2013/04/tips-for-implementing-responsive-designs-using-bootstrap/ -->
+    <!-- http://stackoverflow.com/a/12270322 -->
+    <div class="container">
+      <!-- Font and paired font of .heading/.subheading and body from Google Fonts -->
+      <!-- www.google.com/fonts/specimen/Ubuntu -->
+      <!-- www.google.com/fonts/specimen/Ubuntu#pairings -->
+      <div class="row-fluid heading">
         <div class="span12">
-            <!-- special typography from bootstrap for lead paragraph -->
-            <!-- http://twitter.github.io/bootstrap/base-css.html#typography -->
-            <p class="lead">A system for using tablet devices as music stands for all types of musical groups</p>
+          <h1>Product: Development Version</h1>
         </div>
-    </div>
-    <div class="row-fluid pitch">
+      </div> 
+      <div class="row-fluid subheading">
+        <div class="span12">
+          <!-- Special typography from Bootstrap for lead paragraph. -->
+          <!-- http://twitter.github.io/bootstrap/base-css.html#typography -->
+          <p class="lead">The music stand system of the future using your own table computers.</p>
+        </div>
+      </div>
+      <div class="row-fluid pitch">
         <div class="span5 offset1 video">
-            <img class="img-polaroid" src="http://placehold.it/480x300">
+          <img class="img-polaroid" alt="Placeholder" src="http://placehold.it/480x300">
         </div>
 
-        <!-- we define a new 'actions' div to contain statistics, order and share buttons -->
+        <!-- We define a new 'actions' div to contain statistics, order, and share buttons.-->
         <div class="span5 actions">
-            <div class="span8 offset2">
-                <div class="statistics">
-                    <div class = "span4">
-                        <!-- linediv-l and linediv-r give dividing lines that look different in horozontal and vertical layouts, illistrating media queries -->
-                        <div class="linediv-l">
-                            <h3>2</h3><p>backers</p>
-                        </div>
-                    </div>
-                    <div class="span4">
-                        <div class="linediv-c">
-                            <h3>$60</h3><p>of $500,000</p>
-                        </div>
-                    </div>
-                    <div class="span4">
-                        <div class="linediv-r">
-                            <h3>100</h3><p>days left</p>
-                        </div>
-                    </div>
+          <div class="row-fluid">
+          <div class="span8 offset2">
+            <div class="row-fluid statistics">
+              <div class="span4">
+                <!-- linediv-l and linediv-r give dividing lines that look
+                different in horizontal and vertical layouts, illustrating
+                media queries. -->
+                <div class="linediv-l">
+                <h3>2</h3> <p>backers</p>
                 </div>
-                <div class="span10 offset1">
-                    <!-- bootstrap progress bar -->
-                    <!-- http://twitter.github.io/bootstrap/components.html#progress -->
-                    <div class="thermometer progress active">
-                        <div class="bar bar-success" style="width: 10%;"></div>
-                        <div class="bar bar-warning" style-"width: 90%;"></div>
-                    </div>
+              </div>
+              <div class="span4">
+                <div class="linediv-c">
+                  <h3>$60</h3> <p>of $100,000</p>
                 </div>
-                <div class="span6 offset3 order">
-                    <!-- Standard Bootstrap button. -->
-                    <!-- http://twitter.github.io/bootstrap/base-css.html#buttons -->
-                    <button class="btn btn-success btn-large">Preorder</button>
+              </div>
+              <div class="span4">
+                <div class="linediv-r">
+                <h3>100</h3> <p>days left</p>
                 </div>
-                <div class="span8 offset2 social">
-                    <!-- social buttons are not included in default bootsrap -->
-                    <!-- see: http://noizwaves.github.io/bootstrap-social-buttons -->
-                    <button class="btn btn-twitter"><i class="icon-twitter"></i> | Twitter</button>
-                    <button class="btn btn-facebook"><i class="icon-facebook"></i> | Facebook</button>
-                </div>
+              </div>
             </div>
+          </div>
+          <div class="row-fluid">
+          <div class="span10 offset1">
+            <!-- Bootstrap progress bar -->
+            <!-- http://twitter.github.io/bootstrap/components.html#progress -->
+            <div class="thermometer progress active">
+              <div class="bar bar-success" style="width: 5%;"></div>
+              <div class="bar bar-warning" style="width: 95%;"></div>
+            </div>
+          </div>
+          </div>
+          <div class="row-fluid">
+          <div class="span6 offset3 order">
+            <!-- Standard Bootstrap button. -->
+            <!-- http://twitter.github.io/bootstrap/base-css.html#buttons -->
+            <button class="btn btn-success btn-large">Preorder</button>
+          </div>
+          </div>
+          <div class="row-fluid">
+          <div class="span8 offset2 social">
+            <!-- Social buttons are not included in default Bootstrap. -->
+            <!-- See: http://noizwaves.github.io/bootstrap-social-buttons -->
+            <button class="btn btn-twitter"><i class="icon-twitter"></i> | Twitter</button>
+            <button class="btn btn-facebook"><i class="icon-facebook"></i> | Facebook</button>
+          </div>
+          </div>
         </div>
-        <!-- beyond this part the marketing copy begins -->
-        <!-- https://developer.mozilla.org/en-us/docs/web/css/text-align -->
-        <!-- http://twitter.github.io/bootstrap/base-css.html#images -->
-        <!-- http://placehold.it -->
-        <div class="row-fluid section1">
-            <div class="span5 offset1 asset">
-                <img class="img-polaroid" src="http://placehold.it/480x300">
-            </div>
-            <div class= "span5 copy">
-                <p>
-                The music stand of the future. The system is designed to run on all tablet computers (both Android and Apple) to display music to an ensamble of musicians for both individual practice, and under the control of the 
-                musical director, for a performance or rehearsal.
-                </p>
-                <p>
-                The individual stands can be controlled from the MD's stand by way of ... blah.. blah... The MD's stand can control the location in the charts, the users need to log into their own parts etc etc...
-                </p>
-            </div>
         </div>
-        <div class="row-fluid section2">
-            <div class="span5 offset1 copy copy-right">
-                <p>
-                The system is controlled by a central server with stores the scanned music and controls the display of the individual parts and the location on the parts currently being used.  The system will also allow the scanning of
-                physical parts, the organisation of them and the notation of them. etc etc.
-                </p>
-            </div>
-            <div class="span5 asset">
-                <img class="img-polaroid" src="http://placehold.it/480x300">
-            </div>
-        </div>
+      </div>
 
-        <!-- for the faq, we introduce a little bit of js, using the accordion. -->
-        <!-- this brings in jquery.js and bootstrap.js as dependencies -->
-        <!-- http://twitter.github.io/bootstrap/javascript.html#collapse -->
-        <div class="row-fluid faq">
-            <div class="span10 offset1">
-                <h3>FAQ</h3>
-                <div class="accordion" id="accordion2">
-                    <div class="accordion-group">
-                        <div class="accordion-heading">
-                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
-                            what does faq stand for?
-                    </a>
+      <!-- Beyond this part the marketing copy begins. -->
+      <!-- https://developer.mozilla.org/en-US/docs/Web/CSS/text-align -->
+      <!-- http://twitter.github.io/bootstrap/base-css.html#images -->
+      <!-- http://placehold.it -->
+      <div class="row-fluid section1">
+        <div class="span5 offset1 asset">
+          <img class="img-polaroid"  alt="Placeholder" src="http://placehold.it/480x300">
+        </div>
+        <div class="span5 copy">
+          <p>
+            The music stand of the future for your ensemble that allows the
+            leader choose the music to display, the rehearsal mark to go from,
+            and the emphasis to give it.
+            The system allows music to be scanned in and converted to parts
+            which are then displayed on any android or apple tablet device
+            using the downloadable application provided for free.
+          </p>
+        </div>
+      </div>
+
+      <div class="row-fluid section2">
+        <div class="span5 offset1 copy copy-right">
+          <p>
+            The central computer system handles the scanning, storage and display
+            of the music and is an integral part of the system. The individual parts
+            can be annotated by the individual player or the leader as required which 
+            will be displayed to the individual again when logged in and the music is
+            displayed.
+          </p>
+        </div>
+        <div class="span5 asset">
+          <img class="img-polaroid"  alt="Placeholder" src="http://placehold.it/480x300">
+        </div>
+      </div>
+
+      <!-- For the FAQ, we introduce a little bit of JS, using the accordion. -->
+      <!-- This brings in jquery.js and bootstrap.js as dependencies. -->
+      <!-- http://twitter.github.io/bootstrap/javascript.html#collapse -->
+      <div class="row-fluid faq">
+          <div class="span10 offset1">
+            <h3>FAQ</h3>
+            <div class="accordion" id="accordion2">
+              <div class="accordion-group">
+                <div class="accordion-heading">
+                  <a class="accordion-toggle" data-toggle="collapse"
+                     data-parent="#accordion2" href="#collapseOne">
+                    What does FAQ stand for?
+                  </a>
                 </div>
                 <div id="collapseOne" class="accordion-body collapse">
-                    <div class="accordion-inner">
-                        frequently asked question.
-                    </div>
-                </div>
-                <div class="accordion-group">
-                    <div class="accordion-heading">
-                        <a class="accordon-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
-                        what's a frequently asked question?
-                        </a>
-                    </div>
-                <div id="collapseTwo" class="accordion-body collapse">
-                   <div class="accordion-inner">
-                      a question which is commonly asked by users.
+                  <div class="accordion-inner">
+                    Frequently Asked Question.
                   </div>
+                </div>
               </div>
+              <div class="accordion-group">
+                <div class="accordion-heading">
+                  <a class="accordion-toggle" data-toggle="collapse"
+                     data-parent="#accordion2" href="#collapseTwo">
+                    What's a Frequently Asked Question?
+                  </a>
+                </div>
+                <div id="collapseTwo" class="accordion-body collapse">
+                  <div class="accordion-inner">
+                    A question which is commonly asked by users.
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
+
       </div>
-  </div>
-</div>  
-<!-- not crucial, but we put this under a cc by sa 3.0 license. -->
-<!-- http://creativecommons.org/licenses/ -->
-<div class="row-fluid footer">
-    <div class="span12">
-        <p>this work is licensed under the <a href="http://creativecommons.org/licenses/by-sa/3.0/">cc by-sa 3.0</a>, without all the cruft that would otherwise be put at the bottom of the page.</p>
+
+      <!-- Not crucial, but we put this under a CC By-SA 3.0 license. -->
+      <!-- http://creativecommons.org/licenses/ -->
+      <div class="row-fluid footer">
+        <div class="span12">
+          <p>This work is licensed under
+            the <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC
+              By-SA 3.0
+            </a>, without all the cruft that would otherwise be
+            put at the bottom of the page.</p>
+        </div>
+      </div>
     </div>
-</div>
-
-
-
-</body>
-</html>	
-
+  </body>
+</html>
